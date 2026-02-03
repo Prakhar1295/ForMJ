@@ -13,22 +13,16 @@ const msg = document.getElementById("hiddenMsg");
 const yesGif = document.getElementById("yesGif");
 const noGif = document.getElementById("noGif");
 
-/* INTRO → SHOW SITE + PLAY MUSIC (EDGE SAFE) */
+/* INTRO → SHOW SITE ONLY (NO AUTOPLAY) */
 enterBtn.addEventListener("click", () => {
   introScreen.style.display = "none";
   mainContent.style.display = "block";
-
-  // EDGE requires play() directly inside click
-  music.volume = 0.6;
-  music.currentTime = 0;
-  music.play();
-
-  musicToggle.textContent = "⏸";
 });
 
-/* MUSIC TOGGLE */
+/* MUSIC — USER-INITIATED (EDGE SAFE) */
 musicToggle.addEventListener("click", () => {
   if (music.paused) {
+    music.volume = 0.6;
     music.play();
     musicToggle.textContent = "⏸";
   } else {
