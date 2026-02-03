@@ -2,9 +2,6 @@ const enterBtn = document.getElementById("enterBtn");
 const introScreen = document.getElementById("introScreen");
 const mainContent = document.getElementById("mainContent");
 
-const music = document.getElementById("bgMusic");
-const musicToggle = document.getElementById("musicToggle");
-
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const reallyNoBtn = document.getElementById("reallyNoBtn");
@@ -13,22 +10,10 @@ const msg = document.getElementById("hiddenMsg");
 const yesGif = document.getElementById("yesGif");
 const noGif = document.getElementById("noGif");
 
-/* INTRO → SHOW SITE ONLY (NO AUTOPLAY) */
+/* INTRO → SHOW SITE */
 enterBtn.addEventListener("click", () => {
   introScreen.style.display = "none";
   mainContent.style.display = "block";
-});
-
-/* MUSIC — USER-INITIATED (EDGE SAFE) */
-musicToggle.addEventListener("click", () => {
-  if (music.paused) {
-    music.volume = 0.6;
-    music.play();
-    musicToggle.textContent = "⏸";
-  } else {
-    music.pause();
-    musicToggle.textContent = "▶";
-  }
 });
 
 /* NO button runs away */
