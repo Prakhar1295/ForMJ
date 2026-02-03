@@ -110,3 +110,10 @@ button {
   color: #ff4d6d;
   cursor: pointer;
 }
+
+#musicToggle {
+  font-size: 1.2rem;
+  color: #ff4d6d;
+  cursor: pointer;
+  margin-top: 10px;
+}
